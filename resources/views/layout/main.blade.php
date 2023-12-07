@@ -14,7 +14,7 @@
     @yield('konten')
     <br>
     <hr>
-    <footer class="text-center"><small>Copyright&copy; 2010 - {{ date('y') }} | PT.Insan Persada Nusantara. Hak cipta
+    <footer class="text-center"><small>Copyright&copy; 2010 - {{ date('Y') }} | PT.Insan Persada Nusantara. Hak cipta
             dilindungi
             undang-undang</small></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

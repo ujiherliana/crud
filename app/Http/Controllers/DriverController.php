@@ -12,7 +12,7 @@ class DriverController extends Controller
      */
     public function index()
     {
-        $data = Driver::orderBy('id', 'desc');
+        $data = Driver::orderBy('id', 'desc')->get();
         return view('driver.index', compact('data'));
     }
 
@@ -21,7 +21,7 @@ class DriverController extends Controller
      */
     public function create()
     {
-        //
+        return view('driver.create');
     }
 
     /**
@@ -29,7 +29,15 @@ class DriverController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:225',
+            'job' => 'required'
+        ]);
+
+        $data = Driver::create($request->all());
+        $data->save();
+
+        return redirect()->route('driver.index')->with('success', 'Creating data successfully');
     }
 
     /**

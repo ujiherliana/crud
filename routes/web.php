@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DriverController;
+use App\Http\Controllers\MerchentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::resource('/driver', DriverController::class);
+
+Route::resource('/merchent', MerchentController::class);
